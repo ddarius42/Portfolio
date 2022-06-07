@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+
+    <h1 class="logo">CarGram</h1>
+    <div class="main">
+        <p class="introduction">Create an account and introduce yourself to the community</p>
+        <h2>Register</h2>
+        {%with messages = get_flashed_messages()%}
+        {%if messages%}
+        {%for message in messages%}
+        <p class="error-messages">{{message}}</p>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        <div class="login-form">
+            <form action="/register" method="POST">
+                <div class="form-name">
+                    <label for="firstName">First Name:</label>
+                    <input class="registration-input" type="text" name="formFirstName">
+                </div>
+                <div class="form-name">
+                    <label for="lastName">Last Name:</label>
+                    <input class="registration-input" type="text" name="formLastName">
+                </div>
+                <div class="form-email">
+                    <label for="email">Email:</label>
+                    <input class="registration-input" type="text" name="formEmail">
+                </div>
+                <div class="form-password">
+                    <label for="password">Password:</label>
+                    <input class="registration-input" type="password" name="formPassword">
+                </div>
+                <div class="form-confirm">
+                    <label for="confrimPassword">Confirm Password:</label>
+                    <input class="registration-input" type="password" name="confirmPassword">
+                </div>
+                <input class="registration-submit" type="submit">
+                <a class="register-button" href="/">Back to Login Page.</a>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
