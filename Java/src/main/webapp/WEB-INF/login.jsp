@@ -1,24 +1,39 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-            <!DOCTYPE html>
-            <html>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+		<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+			<!DOCTYPE html>
+			<html>
 
-            <head>
-                <meta charset="ISO-8859-1">
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-                    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-                    crossorigin="anonymous">
-                <title>CanIBorrow?</title>
-            </head>
 
-            <body>
-                <h1>CanIBorrow?</h1>
-                <h2 class="description">dsfafasfsafasfsadfasdfasfsaf</h2>
-                <form action="/createUser" method="post">
-                    <label for="name" path="name">Name: </label>
-                    
-                </form>
-            </body>
+			<head>
+				<meta charset="ISO-8859-1">
+				<link rel="stylesheet" type="text/css" href="/css/login.css" />
+				<title>Can I Borrow!</title>
+			</head>
 
-            </html>
+			<body>
+				<h1>Can I Borrow!</h1>
+				<h2> Welcome! This is a platform where users can interact with people around them and share
+					tools, cars, equipment and much more. </h2>
+				<h3>Login</h3>
+				<form:form class="form" action="/login" method="post" modelAttribute="newLogin">
+
+					<div class="form-group">
+						<form:label class="form-label" path="email">Email: </form:label>
+						<form:errors path="email" />
+						<form:input class="form-input" path="email" />
+					</div>
+					<div class="form-group">
+						<form:label class="form-label" path="password">Password: </form:label>
+						<form:errors path="password" />
+						<form:password class="form-input" path="password" />
+					</div>
+					<button class="form-login">Login</button>
+
+
+				</form:form>
+				<a class="register" href="/register">Don't have an account? Register Here!!!</a>
+
+			</body>
+
+			</html>

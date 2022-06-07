@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background-color: blanchedalmond;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-image:url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
+}
+
+a{
+    text-decoration: none;
+}
+
+.title{
+    background-image:url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
+    word-spacing:-5px;
+	font-size: 55px;
+	color:rgb(231, 224, 167);
+}
+
+.title:hover{
+    color: rgb(241, 243, 207);
+}
+
+ul{
+    background-image:url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
+    display: flex;
+}
+
+.nav-link{
+    margin: 10px;
+    background: local;
+    font-size: 27px;
+    list-style: none;
+    text-decoration: none;
+    color: rgb(231, 224, 167);
+    border-radius: .8rem;
+}
+
+.nav-link:hover{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+table{
+    margin: auto;
+}
+
+tr{
+    padding: 20px;
+    background-color: lightskyblue;
+    max-width: 70%;
+    margin: 30px;
+    display: inline-block;
+    border-radius: .8rem;
+    position: relative;
+    height: 400px;
+}
+
+td{
+    display: flex;
+    font-size: 20px;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+img{
+    border-radius: .8rem;
+    width: 300px;
+}
+
+.price{
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+}
+

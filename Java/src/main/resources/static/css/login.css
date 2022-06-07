@@ -1,0 +1,58 @@
+html{
+	background-image:url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
+	background-size: 100%;
+}
+*{
+	
+	text-align: center;
+}
+h1 {
+	word-spacing:-5px;
+	font-size: 50px;
+	color:rgb(231, 224, 167);
+	text-align:center;
+}
+h2{
+	margin: auto;
+	width: 50%;
+	color:rgb(231, 224, 167);
+}
+h3{
+	color:rgb(231, 224, 167);
+}
+
+.form{
+	margin:auto;
+}
+
+.form-label{
+	font-size: 25px;
+	color: rgb(231, 224, 167);
+}
+.form-group{
+	margin:20px;
+}
+.form-input{
+	background-color: blanchedalmond;
+	border-radius: 20rem;
+	font-size: 120%;
+	border: 5px solid rgb(24, 87, 30);
+}
+
+.form-login{
+	font-size: 18px;
+	background-color: rgba(38, 85, 187, 0.911);
+	border-radius: .4rem;
+	padding: 3px 6px;
+}
+
+.register {
+	color: rgb(231, 224, 167);
+	font-size: 20px;
+	text-decoration: none;
+	margin-top: 20px;
+
+}
+a:hover{
+	color: rgba(38, 85, 187, 0.911);
+}

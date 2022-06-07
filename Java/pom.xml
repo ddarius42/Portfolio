@@ -8,13 +8,13 @@
 		<version>2.6.7</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javasolo</groupId>
-	<artifactId>javaproject</artifactId>
+	<groupId>com.caniborrow</groupId>
+	<artifactId>java-full-stack-exam</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>javaproject</name>
-	<description>Demo project for Spring Boot</description>
+	<name>CanIBorrow</name>
+	<description>java can i borrow application</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
