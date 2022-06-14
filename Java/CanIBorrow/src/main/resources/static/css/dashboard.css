@@ -58,7 +58,7 @@ table{
 tr{
     padding: 20px;
     background-image: url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
-    max-width: 70%;
+    max-width: 30%;
     margin: 30px;
     display: inline-block;
     border-radius: .8rem;
@@ -80,23 +80,28 @@ td{
 
 
 img{
+    position: relative;
     border-radius: .8rem;
+    max-width: 100%;
     width: 300px;
     position: relative;
-    bottom: 0%;
+}
+
+
+
+.post-title, .price, .description{
+    color: rgb(231, 224, 167);
+    font-size: 30px;
+    overflow: hidden;
+    max-width: 20ch;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .price{
     position:absolute;
-    bottom: 0;
+    bottom: 5%;
     left: 0;
     right: 0;
     margin: auto;
-
 }
-
-.post-title, .price{
-    color: rgb(231, 224, 167);
-    font-size: 30px;
-}
-

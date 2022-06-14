@@ -116,5 +116,24 @@ img{
 .edit-delete{
     position:relative;
     margin-left: 50px;
-    
+}
+
+button, .edit-delete{
+    background: none;
+    color: rgb(231, 224, 167);
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+    border-radius: .8rem;
+    padding: 3px 6px;
+}
+
+button, .edit-delete:hover{
+    background-color: blanchedalmond;
+    color: black;
+}
+
+.price-value{
+    margin: 15px;
 }

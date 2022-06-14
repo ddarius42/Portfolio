@@ -7,6 +7,7 @@ html{
 	text-align: center;
 }
 h1 {
+	margin-bottom: 200px;
 	word-spacing:-5px;
 	font-size: 50px;
 	color:rgb(231, 224, 167);
@@ -23,6 +24,10 @@ h3{
 
 .form{
 	margin:auto;
+}
+
+.registration-form{
+	margin-top: 200px;
 }
 
 .form-label{
@@ -44,6 +49,7 @@ h3{
 	background-color: rgba(38, 85, 187, 0.911);
 	border-radius: .4rem;
 	padding: 3px 6px;
+	cursor: pointer;
 }
 
 .register {
@@ -51,8 +57,14 @@ h3{
 	font-size: 20px;
 	text-decoration: none;
 	margin-top: 20px;
-
 }
+
+.text-danger{
+	font-size: 20px;
+	color: red;
+	font-weight: bold;
+}
+
 a:hover{
 	color: rgba(38, 85, 187, 0.911);
 }

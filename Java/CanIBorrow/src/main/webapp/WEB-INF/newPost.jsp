@@ -38,9 +38,23 @@
                         <form:input class="form-input" id="price" type="number" path="price" />
                     </div>
                     <div class="form-group">
+                        <form:label class="form-label" path="per">Per: </form:label>
+                        <form:errors path="per" />
+                        <form:select class="form-input" path="per">
+                            <form:option value="hour" label="hour" />
+                            <form:option value="day" label="day" />
+                        </form:select>
+                    </div>
+                    <div class="form-group">
                         <form:label class="form-label" path="image">Image: link only upload coming soon!!!</form:label>
                         <form:errors path="image" />
-                        <form:textarea  class="image-textarea" path="image" />
+                        <form:textarea class="image-textarea" path="image" />
+                    </div>
+
+                    <div class="form-group">
+                        <form:label class="form-label" path="description">Description: </form:label>
+                        <form:errors path="description" />
+                        <form:textarea class="image-textarea" path="description" />
                     </div>
                     <div class="form-group">
                         <form:label path="user"></form:label>
@@ -48,6 +62,7 @@
                         <form:hidden path="user" value="${loggedInUser.id}" />
                     </div>
                     <button>Create</button>
+                    <a href="/profile/${loggedInUser.id}">Cancel</a>
                 </form:form>
 
             </body>

@@ -35,6 +35,7 @@
 							</td>
 							<td class="price">
 								<c:out value="${post.price}" />
+								<c:out value="/ ${post.per}" />
 							</td>
 						</tr>
 					</c:forEach>

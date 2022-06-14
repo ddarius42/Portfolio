@@ -5,6 +5,7 @@
             <html lang="en">
 
             <head>
+                <link rel="stylesheet" href="/css/newPost.css">
                 <meta charset="UTF-8">
                 <meta http-equiv="X-UA-Compatible" content="IE=edge">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,9 +27,22 @@
                             path="price" />
                     </div>
                     <div class="form-group">
+                        <form:label class="form-label" path="per">Per: </form:label>
+                        <form:errors path="per" />
+                        <form:select class="form-input" path="per">
+                            <form:option value="hour" label="hour" />
+                            <form:option value="day" label="day" />
+                        </form:select>
+                    </div>
+                    <div class="form-group">
                         <form:label class="form-label" path="image">Image: link only upload coming soon!!!</form:label>
                         <form:errors path="image" />
-                        <form:textarea value="${editPost.image}" class="form-input" path="image" />
+                        <form:textarea value="${editPost.image}" class="image-textarea" path="image" />
+                    </div>
+                    <div class="form-group">
+                        <form:label class="form-label" path="description">Description: </form:label>
+                        <form:errors path="description" />
+                        <form:textarea class="image-textarea" value="${editPost.description}" path="description" />
                     </div>
                     <div class="form-group">
                         <form:label path="user"></form:label>

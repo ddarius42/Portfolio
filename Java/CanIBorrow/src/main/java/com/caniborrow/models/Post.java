@@ -20,15 +20,21 @@ public class Post {
     private Long id;
 
     @NotEmpty(message = "This field cannot be empty")
-    @Size(min = 3, max = 200, message = "Title must be between 3 and 200 characters")
+    @Size(min = 3, max = 30, message = "Title must be between 3 and 30 characters")
     private String title;
 
     @Min(0)
     private Integer price;
 
+    private String per;
+
     @NotEmpty(message = "This field cannot be empty")
     @Size(min = 3, max = 200, message = "Title must be between 3 and 200 characters")
     private String image;
+
+    @NotEmpty(message = "This field cannot be empty")
+    @Size(max = 500, message = "Description must be below 500 characters")
+    private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
@@ -72,6 +78,22 @@ public class Post {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getPer() {
+        return this.per;
+    }
+
+    public void setPer(String per) {
+        this.per = per;
+    }
+
+    public String getDescription() {
+        return this.description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
 }

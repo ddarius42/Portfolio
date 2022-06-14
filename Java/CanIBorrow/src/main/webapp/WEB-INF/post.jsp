@@ -15,19 +15,37 @@
             </head>
 
             <body>
-                <table>
-                    <tr>
-                        <td>
-                            <h1>
-                                <c:out value="${postModel.title}" />
-                            </h1>
-                        </td>
 
+                <div class="nav">
+
+                    <a href="/dashboard">
+                        <h1 class="title"> CanIBorrow!</h1>
+                    </a>
+
+                    <ul>
+                        <li class="nav-link"><a class="nav-link" href="/dashboard">Home</a></li>
+                        <li class="nav-link"><a class="nav-link" href="/newPost">New Post</a></li>
+                        <li class="nav-link"><a class="nav-link" href="/profile/${loggedInUser.id}">Profile</a></li>
+                        <li class="nav-link"><a class="nav-link" href="/logout">Logout</a></li>
+                    </ul>
+                </div>
+                <h2>
+                    <c:out value="${postModel.title}" />
+                </h2>
+                <table>
+
+                    <tr>
                         <td>
                             <img src="${postModel.image}" alt="image of ${post.title}">
                         </td>
                         <td>
-                            <c:out value="${postModel.price}" />
+                            <p class="price">
+                                <c:out value="${postModel.price}" />
+                                <c:out value="/ ${postModel.per}" />
+                            </p>
+                            <p class="description">
+                                <c:out value="${postModel.description}" />
+                            </p>
                         </td>
                     </tr>
                     </div>
