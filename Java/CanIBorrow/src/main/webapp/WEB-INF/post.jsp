@@ -33,7 +33,6 @@
                     <c:out value="${postModel.title}" />
                 </h2>
                 <table>
-
                     <tr>
                         <td>
                             <img src="${postModel.image}" alt="image of ${post.title}">
@@ -44,6 +43,7 @@
                                 <c:out value="/ ${postModel.per}" />
                             </p>
                             <p class="description">
+                                Description:
                                 <c:out value="${postModel.description}" />
                             </p>
                         </td>

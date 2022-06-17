@@ -1,11 +1,15 @@
 package com.caniborrow.models;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
@@ -39,6 +43,10 @@ public class Post {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
+
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(name = "favorite", joinColumns = @JoinColumn(name = "post_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private List<User> likers;
 
     public Long getId() {
         return this.id;
@@ -94,6 +102,14 @@ public class Post {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<User> getLikers() {
+        return this.likers;
+    }
+
+    public void setLikers(List<User> likers) {
+        this.likers = likers;
     }
 
 }

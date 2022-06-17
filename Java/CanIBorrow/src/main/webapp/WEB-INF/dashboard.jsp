@@ -31,11 +31,25 @@
 								<c:out value="${post.title}" />
 							</td>
 							<td>
-								<img src="${post.image}" alt="image of ${post.title}">
+								<img class="post-img" src="${post.image}" alt="image of ${post.title}">
 							</td>
 							<td class="price">
 								<c:out value="${post.price}" />
 								<c:out value="/ ${post.per}" />
+								<c:choose>
+									<c:when test="${post.likers.contains(sessionUser)}">
+										<a href="/project/${post.id}/unFavoritePost"><img class="like"
+												src="img/liked.png" alt="unlike"></a>
+									</c:when>
+									<c:otherwise>
+
+										<a href="/project/${post.id}/favoritePost"><img class="like"
+												src="img/unliked.png" alt="like"></a>
+									</c:otherwise>
+								</c:choose>
+							</td>
+							<td>
+
 							</td>
 						</tr>
 					</c:forEach>

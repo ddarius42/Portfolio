@@ -79,7 +79,7 @@ td{
 
 
 
-img{
+.post-img{
     position: relative;
     border-radius: .8rem;
     max-width: 100%;
@@ -104,4 +104,9 @@ img{
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.like{
+    margin-left: 50px;
+    width: 50px;
 }

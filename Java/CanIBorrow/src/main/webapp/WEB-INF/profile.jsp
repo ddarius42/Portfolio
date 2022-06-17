@@ -12,33 +12,30 @@
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <title>Profile</title>
                 </head>
-
                 <body>
                     <div class="nav">
-
                         <a href="/dashboard">
                             <h1 class="title"> CanIBorrow!</h1>
                         </a>
-
                         <h1>
                             <c:out value="${loggedInUser.name}'s" /> Profile
                         </h1>
-
                         <ul>
                             <li class="nav-link"><a class="nav-link" href="/dashboard">Home</a></li>
                             <li class="nav-link"><a class="nav-link" href="/newPost">New Post</a></li>
                             <li class="nav-link"><a class="nav-link" href="/logout">Logout</a></li>
                         </ul>
                     </div>
-
-                    <h2>Posts</h2>
+                    <div class="headers">
+                        <h2>Posts</h2>
+                        <h2> <a class="favorites" href="/${loggedInUser.id}/favorites"> Favorites</a></h2>
+                    </div>
                     <c:set var="posts" value="${postsByUser}" />
                     <c:if test="${fn:length(posts) == 0}">
                         <h3>NO posts yet</h3>
                     </c:if>
                     <table>
                         <c:forEach items="${postsByUser}" var="post">
-
                             <tr>
                                 <td class="post-title">
                                     <c:out value="${post.title}" />
@@ -51,20 +48,21 @@
                                         <c:out value="${post.price}" />
                                         <c:out value="/ ${post.per}" />
                                     </p>
+                                <td>
                                     <p class="description">
+                                        Description:
                                         <c:out value="${post.description}" />
                                     </p>
+                                </td>
+                                <td>
                                     <a class="edit-delete" href="/editPostPage/${post.id}">Edit</a>
-
                                     <form:form action="/deletePost/${loggedInUser.id}/${post.id}" method="delete"
                                         modelAttribute="deletePost">
                                         <button class="edit-delete">Delete</button>
                                     </form:form>
                                 </td>
                             </tr>
-
                         </c:forEach>
-                        </div>
                     </table>
                 </body>
 
