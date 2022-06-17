@@ -61,6 +61,11 @@
                         <form:errors path="user" />
                         <form:hidden path="user" value="${loggedInUser.id}" />
                     </div>
+                    <div class="form-group">
+                        <form:label class="form-label" path="contact">Contact: </form:label>
+                        <form:errors path="contact" />
+                        <form:input class="form-input" path="contact" />
+                    </div>
                     <button>Create</button>
                     <a href="/profile/${loggedInUser.id}">Cancel</a>
                 </form:form>

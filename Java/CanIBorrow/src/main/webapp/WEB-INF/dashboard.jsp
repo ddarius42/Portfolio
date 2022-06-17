@@ -36,21 +36,26 @@
 							<td class="price">
 								<c:out value="${post.price}" />
 								<c:out value="/ ${post.per}" />
-								<c:choose>
-									<c:when test="${post.likers.contains(sessionUser)}">
-										<a href="/project/${post.id}/unFavoritePost"><img class="like"
-												src="img/liked.png" alt="unlike"></a>
-									</c:when>
-									<c:otherwise>
+								<c:set var="sessionUser" value="${loggedInUser.id}" />
+								<c:set var="user" value="${post.user.id}" />
+								<c:if test="${user != sessionUser}">
 
-										<a href="/project/${post.id}/favoritePost"><img class="like"
-												src="img/unliked.png" alt="like"></a>
-									</c:otherwise>
-								</c:choose>
-							</td>
-							<td>
+									<c:choose>
+										<c:when test="${post.likers.contains(sessionUser)}">
+											<a href="/post/${post.id}/unFavoritePost"><img class="like"
+													src="img/liked.png" alt="unlike"></a>
+										</c:when>
+										<c:otherwise>
 
+											<a href="/post/${post.id}/favoritePost"><img class="like"
+													src="img/unliked.png" alt="like"></a>
+										</c:otherwise>
+									</c:choose>
 							</td>
+							</c:if>
+
+
+
 						</tr>
 					</c:forEach>
 					</div>

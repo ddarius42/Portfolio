@@ -52,10 +52,12 @@ ul{
 }
 
 table{
+
     margin: auto;
 }
 
 tr{
+    min-width: fit-content;
     padding: 20px;
     background-image: url("/img/new-dark-teal-with-dark-teal-canvas-fabric-texture-free-high-resolution-photo.webp");
     max-width: 30%;

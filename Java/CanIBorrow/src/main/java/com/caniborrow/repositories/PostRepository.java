@@ -15,7 +15,7 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 	@Query(value = "SELECT * FROM posts where user_id = ?1", nativeQuery = true)
 	List<Post> findByUserId(Long id);
 
-	@Query(value = "SELECT * FROM favorite LEFT JOIN users on user_id = users.id LEFT JOIN posts ON post_id= posts.id WHERE users.id=?1", nativeQuery = true)
+	@Query(value = "SELECT * FROM favorite LEFT JOIN posts ON post_id= posts.id LEFT JOIN users on fav_user_id = users.id  WHERE users.id=?1", nativeQuery = true)
 	public List<Post> findFavPostByUserId(Long id);
 
 }

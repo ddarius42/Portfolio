@@ -78,6 +78,11 @@ h2, .favorites{
     margin-right: 10%;
 }
 
+h3{
+    text-align: center;
+    font-size: 30px;
+}
+
 .favorites{
     text-decoration: underline;
     text-decoration-color: green;
@@ -143,4 +148,9 @@ button, .edit-delete:hover{
 
 .price-value{
     margin: 15px;
+}
+
+.like{
+    margin-left: 50px;
+    width: 50px;
 }

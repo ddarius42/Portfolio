@@ -121,7 +121,7 @@ public class DashController {
 
 	// LIKE UNLIKE
 
-	@GetMapping("/project/{id}/favoritePost")
+	@GetMapping("/post/{id}/favoritePost")
 	public String favoritePost(@PathVariable Long id, HttpSession session) {
 		if (session.getAttribute("loggedInUser") == null) {
 			return "redirect:/";
@@ -133,7 +133,7 @@ public class DashController {
 		return "redirect:/dashboard";
 	}
 
-	@GetMapping("/project/{id}/unFavoritePost")
+	@GetMapping("/post/{id}/unFavoritePost")
 	public String unfavoritePost(@PathVariable Long id, HttpSession session) {
 		if (session.getAttribute("loggedInUser") == null) {
 			return "redirect:/";
@@ -143,6 +143,18 @@ public class DashController {
 		User likingUser = userService.findById(user.getId());
 		postService.unFavoritePost(post, likingUser);
 		return "redirect:/dashboard";
+	}
+
+	@GetMapping("/{userId}/post/{id}/unFavoritePostFromFavPage")
+	public String unfavoritePostFromFavPage(@PathVariable Long id, HttpSession session) {
+		if (session.getAttribute("loggedInUser") == null) {
+			return "redirect:/";
+		}
+		Post post = postService.findById(id);
+		User user = (User) session.getAttribute("loggedInUser");
+		User likingUser = userService.findById(user.getId());
+		postService.unFavoritePost(post, likingUser);
+		return "redirect:/{userId}/favorites";
 	}
 
 	// favorites

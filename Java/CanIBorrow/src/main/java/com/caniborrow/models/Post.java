@@ -40,12 +40,16 @@ public class Post {
     @Size(max = 500, message = "Description must be below 500 characters")
     private String description;
 
+    @NotEmpty(message = "Field cannot be empty")
+    @Size(min = 10, max = 50)
+    private String contact;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "favorite", joinColumns = @JoinColumn(name = "post_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+    @JoinTable(name = "favorite", joinColumns = @JoinColumn(name = "post_id"), inverseJoinColumns = @JoinColumn(name = "favUser_id"))
     private List<User> likers;
 
     public Long getId() {
@@ -110,6 +114,14 @@ public class Post {
 
     public void setLikers(List<User> likers) {
         this.likers = likers;
+    }
+
+    public String getContact() {
+        return this.contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
 }

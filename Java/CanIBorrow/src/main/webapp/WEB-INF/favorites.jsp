@@ -6,6 +6,7 @@
                 <html lang="en">
 
                 <head>
+                    <link rel="stylesheet" href="/css/profile.css">
                     <meta charset="UTF-8">
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,19 @@
                 </head>
 
                 <body>
-                    <c:out value="${favorites}"></c:out>
+                    <div class="nav">
+                        <a href="/dashboard">
+                            <h1 class="title"> CanIBorrow!</h1>
+                        </a>
+                        <h1>
+                            <c:out value="${loggedInUser.name}'s" /> Favorites
+                        </h1>
+                        <ul>
+                            <li class="nav-link"><a class="nav-link" href="/dashboard">Home</a></li>
+                            <li class="nav-link"><a class="nav-link" href="/newPost">New Post</a></li>
+                            <li class="nav-link"><a class="nav-link" href="/logout">Logout</a></li>
+                        </ul>
+                    </div>
                     <c:set var="posts" value="${favorites}" />
                     <c:if test="${fn:length(posts) == 0}">
                         <h3>NO favorites</h3>
@@ -39,7 +52,10 @@
                                         Description:
                                         <c:out value="${posts.description}" />
                                     </p>
+                                    <a href="/${loggedInUser.id}/post/${posts.id}/unFavoritePostFromFavPage"><img
+                                            class="like" src="/img/liked.png" alt="like"></a>
                                 </td>
+
                             </tr>
 
                         </c:forEach>

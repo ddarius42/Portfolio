@@ -47,6 +47,24 @@
                                 <c:out value="${postModel.description}" />
                             </p>
                         </td>
+                        <td>
+                            <p class="description">
+                                Contact:
+                                <c:out value="${postModel.contact}" />
+                            </p>
+
+                        </td>
+                        <c:set var="sessionUser" value="${loggedInUser.id}" />
+                        <c:set var="user" value="${postModel.user.id}" />
+                        <c:if test="${user == sessionUser}">'
+                            <td>
+                                <a class="edit-delete" href="/editPostPage/${postModel.id}">Edit</a>
+                                <form:form action="/deletePost/${loggedInUser.id}/${postModel.id}" method="delete"
+                                    modelAttribute="deletePost">
+                                    <button class="edit-delete">Delete</button>
+                                </form:form>
+                            </td>
+                        </c:if>
                     </tr>
                     </div>
                 </table>

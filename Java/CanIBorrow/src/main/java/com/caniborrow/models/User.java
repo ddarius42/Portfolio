@@ -52,7 +52,7 @@ public class User {
 	private List<Post> Post;
 
 	@ManyToMany(fetch = FetchType.LAZY)
-	@JoinTable(name = "favorite", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "post_id"))
+	@JoinTable(name = "favorite", joinColumns = @JoinColumn(name = "favUser_id"), inverseJoinColumns = @JoinColumn(name = "post_id"))
 	private List<Post> fovoritePosts;
 
 	public Long getId() {
