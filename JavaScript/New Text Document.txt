@@ -1,0 +1,2 @@
+These are some small JavaScript projects I've been working on during my boot camp at Coding Dojo as well as after graduation. This is only the beginning of my journey
+as a developer and I strive to create beautiful interactive Web applications for developers to explore and enjoy with me.
