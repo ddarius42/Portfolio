@@ -1,0 +1,370 @@
+::-webkit-scrollbar{
+    width: auto;
+}
+
+::-webkit-scrollbar-track{
+    background: inherit;
+    background-color: black;
+    border-radius: .3rem;
+    margin-block: -.2em;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #046e15;
+    border-radius: .4rem;
+    border-width: .2em;
+    height: 30px;
+    margin-block: .5em;
+}
+
+.back-card::-webkit-scrollbar-track{
+    background-color: rgb(204, 226, 255);
+    border-radius: .3rem;
+    margin-block: .5em;
+}
+
+.back-card::-webkit-scrollbar-thumb{
+    background-color: rgba(105, 105, 105, 0.349);
+    border-radius: .4rem;
+    border-width: .2em;
+    height: 30px;
+    margin-block: .5em;
+}
+
+.language-card::-webkit-scrollbar-track{
+    background-color: rgb(204, 226, 255);
+    border-radius: .3rem;
+    margin-block: .5em;
+}
+
+.language-card::-webkit-scrollbar-thumb{
+    background-color: rgba(105, 105, 105, 0.349);
+    border-radius: .4rem;
+    border-width: .2em;
+    height: 30px;
+    margin-block: .50em;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(134, 134, 134);
+    border-radius: .4rem;
+    height: 30px;
+}
+
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+.nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #046e15 ;
+    z-index: 1;
+    opacity: 75%;
+
+}
+
+.nav-ul{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    padding:0px 6px;
+}
+
+
+.nav-li{
+    margin: 5px 30px;
+    list-style: none;
+}
+
+a:hover{
+    background-color: grey;
+    border-radius: .3rem;
+}
+
+.git{
+    margin: 5px 10px;
+    background: none;
+    width: 21px;
+}
+
+.intro{
+    top: 0;
+    position: fixed;
+    background-image: url(/img/grey2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+h1{
+    font-size: 12vh;
+}
+
+h1,h2{
+    position: relative;
+    top: 35%;
+    color: #046e15;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+h2{
+    margin-top: 50px;
+    font-size: 35px;
+}
+
+.about{
+    position: relative;
+    top: 100vh;
+    background-image: url(/img/nature2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.about-title{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 5vh;
+    color: rgb(213, 221, 214);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 30px;
+    font-size: 8vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.aboutMeCards{
+    margin: 10vh auto;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 60%;
+}
+
+.single-card{
+    cursor: pointer;
+    backface-visibility: hidden;
+    border-radius: .5rem;
+    width: 25%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+
+}
+
+.single-card.flipCard{
+    transform: rotateY(180deg);
+}
+
+.front-card{
+    border-radius: .5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #033f0d;
+    transform: rotateX(0deg);
+}
+
+.back-card{
+    display: block;
+    justify-content: center;
+    border-radius: .5rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: rgba(41, 78, 41, 0.945);
+    transform: rotateY(180deg);
+    overflow-y: scroll;
+}
+
+.card-title{
+    text-align: center;
+    font-size: 3vh;
+    margin-top: 20%;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.card-img{
+    display: block;
+    margin: 30% auto;
+    border-radius: .3rem;
+    width: 70%;
+    height: 30%;
+}
+
+.car-img{
+    display: block;
+    margin: 10% auto;
+    border-radius: .3rem;
+    width: 80%;
+    height: 35%;
+}
+
+.about-me{
+    word-spacing:4px;
+    line-height: 150%;
+    font-size: 120%;
+    margin: 10%;
+    color: whitesmoke;
+}
+
+
+span{
+    color: #03911a;
+}
+
+.work{
+    border-top: 10px inset #03911a;
+    position: relative;
+    top: 100vh;
+    background-image: url(/img/galaxy1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.work-title{
+    font-size: 55px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(213, 221, 214);
+    margin: 3%;
+}
+
+.projects{
+    margin: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.project-section{
+    width: 30%;
+    height:80vh;
+}
+
+
+
+.project-title{
+    font-size: 5vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(213, 221, 214);
+    margin: 1%;
+}
+
+
+.language-card{
+    margin: 5vh;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    height: 70%;
+    border-radius: .3rem;
+    background-color: #4b4b4b75;
+    cursor: pointer;
+    backface-visibility: hidden;
+    border-radius: .5rem;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.language-front-card{
+    border-radius: .5rem;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    height: 100%;
+}
+.language-back-card{
+    display: block;
+    justify-content: center;
+    border-radius: .5rem;
+    backface-visibility: hidden;
+    background-color: rgba(166, 174, 185, 0.301);
+    transform: rotateY(180deg);
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.project-detail{
+    margin: 15% 10%;
+    color: whitesmoke;
+    font-size: 25px;
+}
+
+.project-link{
+    text-align: center;
+    cursor: pointer;
+    font-size: 50px;
+    margin-left: 30px;
+    color: white;
+
+}
+
+.language-card.flipCard{
+    transform: rotateY(180deg);
+}
+
+.flask{
+    display: block;
+    margin:30% auto ;
+    position: relative;
+    top: 5%;
+    width: 80%;
+    border-radius: .3rem;
+}
+
+.knowledge-card{
+    margin: auto;
+    margin-top: 30%;
+    border-radius: .5rem;
+    width:fit-content;
+    height: fit-content;
+    background-color: #4949498f;
+    max-height: 100%;
+}
+
+
+.knowledge-card li{
+    list-style: square;
+    font-size: 2vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
+.contact{
+    border-top: 10px inset #03911a;
+    position: relative;
+    top: 100vh;
+    background-image: url(/img/contact.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.contact-title{
+    font-size: 75px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: rgb(0, 150, 250);
+    margin: 3%;
+}
